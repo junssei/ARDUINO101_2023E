@@ -34,20 +34,20 @@ void loop() {
     if (input == "blue"){
       if(digitalRead(LED2)){
         digitalWrite(LED2, LOW);
-        Serial.println("Green is turned off");
+        Serial.println("Blue is turned off");
       } else {
         digitalWrite(LED2, HIGH);
-        Serial.println("Green is turned on");
+        Serial.println("Blue is turned on");
       }
     }
     
     if (input == "yellow"){
       if(digitalRead(LED1)){
         digitalWrite(LED1, LOW);
-        Serial.println("Green is turned off");
+        Serial.println("Yellow is turned off");
       } else {
         digitalWrite(LED1, HIGH);
-        Serial.println("Green is turned on");
+        Serial.println("Yellow is turned on");
       }
     }
 
@@ -55,10 +55,12 @@ void loop() {
       digitalWrite(LED1, LOW);
       digitalWrite(LED2, LOW); 
       digitalWrite(LED3, LOW);
+      Serial.println("All LEDs is turned off");
     } else if (input == "on"){
       digitalWrite(LED1, HIGH);
       digitalWrite(LED2, HIGH); 
       digitalWrite(LED3, HIGH);
+      Serial.println("All LEDs is turned on");
     }
 
     Serial.println("Please input any color of LED:");
